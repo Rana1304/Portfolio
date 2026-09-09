@@ -2,22 +2,54 @@ function Skills() {
   const skills = [
     {
       name: "Java",
-      category: "Programming",
+      category: "Languages",
       level: "Advanced",
       icon: "☕",
     },
     {
       name: "Python",
-      category: "Programming",
+      category: "Languages",
       level: "Intermediate",
       icon: "🐍",
     },
     {
       name: "JavaScript",
-      category: "Programming",
+      category: "Languages",
       level: "Intermediate",
       icon: "JS",
     },
+    {
+      name: "SQL",
+      category: "Languages",
+      level: "Intermediate",
+      icon: "SQL",
+    },
+    {
+      name: "C",
+      category: "Languages",
+      level: "Intermediate",
+      icon: "C",
+    },
+
+    {
+      name: "DSA",
+      category: "Core CS",
+      level: "Advanced",
+      icon: "⌘",
+    },
+    {
+      name: "OOP",
+      category: "Core CS",
+      level: "Advanced",
+      icon: "OOP",
+    },
+    {
+      name: "SOLID Principles",
+      category: "Core CS",
+      level: "Intermediate",
+      icon: "S",
+    },
+
     {
       name: "React.js",
       category: "Frontend",
@@ -25,34 +57,110 @@ function Skills() {
       icon: "⚛",
     },
     {
-      name: "HTML & CSS",
+      name: "HTML5",
       category: "Frontend",
       level: "Advanced",
       icon: "</>",
     },
     {
-      name: "MongoDB",
-      category: "Database",
+      name: "CSS3",
+      category: "Frontend",
+      level: "Advanced",
+      icon: "#",
+    },
+    {
+      name: "Tailwind CSS",
+      category: "Frontend",
+      level: "Intermediate",
+      icon: "TW",
+    },
+
+    {
+      name: "JDBC",
+      category: "Backend & APIs",
       level: "Intermediate",
       icon: "DB",
     },
     {
-      name: "SQL",
-      category: "Database",
+      name: "REST APIs",
+      category: "Backend & APIs",
+      level: "Intermediate",
+      icon: "API",
+    },
+
+    {
+      name: "MySQL",
+      category: "Databases",
       level: "Intermediate",
       icon: "SQL",
     },
     {
-      name: "Git & GitHub",
+      name: "MongoDB",
+      category: "Databases",
+      level: "Intermediate",
+      icon: "DB",
+    },
+
+    {
+      name: "AI with Python",
+      category: "AI & Machine Learning",
+      level: "Learning",
+      icon: "AI",
+    },
+    {
+      name: "LLM APIs",
+      category: "AI & Machine Learning",
+      level: "Learning",
+      icon: "✦",
+    },
+    {
+      name: "Generative AI",
+      category: "AI & Machine Learning",
+      level: "Learning",
+      icon: "✧",
+    },
+    {
+      name: "Gradio",
+      category: "AI & Machine Learning",
+      level: "Learning",
+      icon: "G",
+    },
+
+    {
+      name: "Git",
       category: "Tools",
       level: "Intermediate",
       icon: "⌘",
     },
     {
-      name: "AI / LLMs",
-      category: "Artificial Intelligence",
+      name: "GitHub",
+      category: "Tools",
+      level: "Intermediate",
+      icon: "GH",
+    },
+    {
+      name: "VS Code",
+      category: "Tools",
+      level: "Advanced",
+      icon: "VS",
+    },
+    {
+      name: "IntelliJ IDEA",
+      category: "Tools",
+      level: "Intermediate",
+      icon: "IJ",
+    },
+    {
+      name: "Eclipse",
+      category: "Tools",
+      level: "Intermediate",
+      icon: "E",
+    },
+    {
+      name: "Vercel",
+      category: "Tools & Deployment",
       level: "Learning",
-      icon: "AI",
+      icon: "▲",
     },
   ];
 
@@ -71,8 +179,8 @@ function Skills() {
           <h2>Technologies I Work With</h2>
 
           <p>
-            Technologies, frameworks and tools I use to build applications
-            and continuously explore new areas of software development.
+            A collection of languages, frameworks, libraries, databases,
+            AI technologies and tools I use to build and explore software.
           </p>
         </div>
 
@@ -94,7 +202,11 @@ function Skills() {
                 <div className="skill-top">
                   <h3>{skill.name}</h3>
 
-                  <span className={`skill-level ${skill.level.toLowerCase()}`}>
+                  <span
+                    className={`skill-level ${skill.level
+                      .toLowerCase()
+                      .replace(" ", "-")}`}
+                  >
                     {skill.level}
                   </span>
                 </div>
