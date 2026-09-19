@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App_red_black.css";
 import "./index.css";
 
 import Navbar from "./components/Navbar";
